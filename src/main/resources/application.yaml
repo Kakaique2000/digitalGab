@@ -4,7 +4,7 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-      ddl-auto: update
+      ddl-auto: create-drop
       use-new-id-generator-mappings: false
     database-platform: org.hibernate.dialect.MySQL57Dialect
     open-in-view: true
@@ -22,11 +22,11 @@ server:
     enabled: false
   http2:
     enabled: true
-  port: 4080
+  port: 8080
   servlet:
-    context-path: /starter-test
+    context-path: /digitalgab
 jwt-security:
-  secret: PseudoSecret-Pseudosecret-Please-Use-Ur-Own-Key-PseudoSecret-Pseudosecret
+  secret: PseudoSecret-Pseudosecret-Please-crazy-Ur-Own-Key-Loucura-Pseudosecret
   expiration-time: 365
 ---
 spring:
@@ -66,4 +66,4 @@ spring:
 server:
   port: 8888
   servlet:
-    context-path: /starter-test
+    context-path: /digitalgab

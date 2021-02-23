@@ -9,12 +9,12 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>osahner</groupId>
-  <artifactId>kotlin-spring-boot-rest-jpa-jwt-starter</artifactId>
+  <groupId>br.com.gabweb</groupId>
+  <artifactId>main-app</artifactId>
   <version>0.7.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>kotlin spring-boot 2 rest/jpa/jwt starter</name>
+  <name>Aplicação principal GabWeb</name>
 
   <properties>
     <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
@@ -237,9 +237,9 @@
         <version>${jacoco-maven-plugin.version}</version>
         <configuration>
           <excludes>
-            <exclude>osahner/config/SecurityConstants.*</exclude>
-            <exclude>osahner/ApplicationKt.*</exclude>
-            <exclude>osahner/domain/**.*</exclude>
+            <exclude>gabweb/config/SecurityConstants.*</exclude>
+            <exclude>gabweb/ApplicationKt.*</exclude>
+            <exclude>gabweb/domain/**.*</exclude>
           </excludes>
         </configuration>
         <executions>
@@ -315,7 +315,7 @@
           </execution>
         </executions>
         <configuration>
-          <repository>osahner/kotlin-spring-boot-rest-jpa-jwt-starter</repository>
+          <repository>gabweb/kotlin-spring-boot-rest-jpa-jwt-starter</repository>
           <noCache/>
           <verbose/>
         </configuration>
