@@ -1,0 +1,435 @@
+_type: export
+__export_format: 4
+__export_date: 2021-02-25T00:58:29.128Z
+__export_source: insomnia.desktop.app:v2020.5.2
+resources:
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb2260552eb35
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614133318837
+    created: 1613955809024
+    url: "{{ base_url }}/v1/solicitacoes?"
+    name: GET v1/solicitacoes
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613955809024
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    parentId: null
+    modified: 1614214600437
+    created: 1613935485619
+    name: DigitalGab
+    description: kotlin-spring-boot-rest-jpa-jwt-starter API
+    scope: null
+    _type: workspace
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb22633c03a87
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614132105895
+    created: 1613955809023
+    url: "{{ base_url }}/v1/solicitacoes"
+    name: POST v1/solicitacoes
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"descricao": "Sergio Lira me da cesta basica aí kkkkkkkkkk"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_03d637dc5d584ee68385b31eb4162741
+    authentication: {}
+    metaSortKey: -1613955809023
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb226505f4776
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140713
+    created: 1613955809021
+    url: "{{ base_url }}/v1/solicitacoes/{{ id }}"
+    name: GET v1/solicitacoes/{id}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613955809021
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c802bbb8c44443fdb9876001f88ad18a
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614041249023
+    created: 1613935510622
+    url: "{{ base_url }}/login"
+    name: POST login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "admin@digitalgab.com",
+        	"password": "test1234"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_0335afbdf88748caaf67fec4debea6e1
+    authentication: {}
+    metaSortKey: -1613935510622
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb2265395ebfd
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140723
+    created: 1613935485635
+    url: "{{ base_url }}/v1/"
+    name: GET v1/
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613935485635
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb226d7061e80
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140719
+    created: 1613935485633
+    url: "{{ base_url }}/v1/required"
+    name: GET v1/required
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: msg
+        disabled: false
+        value: string
+    headers: []
+    authentication: {}
+    metaSortKey: -1613935485633
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb22671803979
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140718
+    created: 1613935485631
+    url: "{{ base_url }}/v1/restricted"
+    name: GET v1/restricted
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613935485631
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb2265395ebfd1
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140711
+    created: 1613935485629
+    url: "{{ base_url }}/v1/test"
+    name: GET v1/test
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613935485629
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_f8260f6c73564e6ebabc7c13f3feb2260f892ac5
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140703
+    created: 1613935485626
+    url: "{{ base_url }}/v1/usuarios/me"
+    name: GET v1/usuarios/me
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1613935485626
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2f4af5b7d1391a7fc4e4d727a242d803b3773769
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140727
+    created: 1613935485636
+    name: Base environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1613935485636
+    _type: environment
+  - _id: jar_2f4af5b7d1391a7fc4e4d727a242d803b3773769
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614050115677
+    created: 1613935485714
+    name: Default Jar
+    cookies:
+      - key: Authorization
+        value: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnYWJ3ZWIuY29tIiwiYXV0aCI6WyJBRE1JTl9VU0VSIiwiT1dORVJfVVNFUiIsIlNUQU5EQVJEX1VTRVIiXSwiZXhwIjoxNjQ1NDkxODc0fQ.2aBD5Wew9NP6OKX9rGASA6QEX5uW7K4_R1IzAwbrf7GvDYakTvSBrkDN61d8BRNpy8ZVYZ0LH2zFFBSSErG7-A
+        domain: localhost
+        path: /gabweb
+        hostOnly: true
+        pathIsDefault: true
+        creation: 2021-02-21T19:43:38.135Z
+        lastAccessed: 2021-02-22T01:04:34.118Z
+        id: "935084748430751"
+      - key: Authorization
+        value: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkaWdpdGFsZ2FiLmNvbSIsImF1dGgiOlsiQURNSU5fVVNFUiIsIk9XTkVSX1VTRVIiLCJTVEFOREFSRF9VU0VSIl0sImV4cCI6MTY0NTU4NjExNX0.UvlixTokNLRvFmYObaMDONdX--4z1u5jXj1bGn0G-EqzzJwAuLcaV3vGQfqruux0-LP7-9HahyZwh-DbKmaV5Q
+        domain: localhost
+        path: /digitalgab
+        hostOnly: true
+        pathIsDefault: true
+        creation: 2021-02-22T22:53:02.598Z
+        lastAccessed: 2021-02-23T03:15:15.676Z
+        id: "15056029919771352"
+    _type: cookie_jar
+  - _id: spc_b70f2cef035447bf8640ad8ce7c271a8
+    parentId: wrk_f8260f6c73564e6ebabc7c13f3feb226
+    modified: 1614034140731
+    created: 1613935485619
+    fileName: Imported Workspace
+    contents: "openapi: \"3.0.3\"\r
+
+      info:\r
+
+      \  title: \"kotlin-spring-boot-rest-jpa-jwt-starter API\"\r
+
+      \  description: \"kotlin-spring-boot-rest-jpa-jwt-starter API\"\r
+
+      \  version: \"1.0.0\"\r
+
+      servers:\r
+
+      \  - url: \"https://kotlin_spring_boot_rest_jpa_jwt_starter\"\r
+
+      paths:\r
+
+      \  /v1/:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/\"\r
+
+      \      operationId: \"helloWorld\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/required:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/required\"\r
+
+      \      operationId: \"helloRequiredWorld\"\r
+
+      \      parameters:\r
+
+      \        - name: \"msg\"\r
+
+      \          in: \"query\"\r
+
+      \          required: true\r
+
+      \          schema:\r
+
+      \            type: \"string\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/restricted:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/restricted\"\r
+
+      \      operationId: \"helloRestrictedWorld\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/solicitacoes:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/solicitacoes\"\r
+
+      \      operationId: \"getSolicitacoes\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \    post:\r
+
+      \      summary: \"POST v1/solicitacoes\"\r
+
+      \      operationId: \"addSolicitacao\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/solicitacoes/{id}:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/solicitacoes/{id}\"\r
+
+      \      operationId: \"getSolicitacao\"\r
+
+      \      parameters:\r
+
+      \        - name: \"id\"\r
+
+      \          in: \"path\"\r
+
+      \          required: true\r
+
+      \          schema:\r
+
+      \            type: \"number\"\r
+
+      \            format: \"int64\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/test:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/test\"\r
+
+      \      operationId: \"helloWorld\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\"\r
+
+      \  /v1/usuarios/me:\r
+
+      \    get:\r
+
+      \      summary: \"GET v1/usuarios/me\"\r
+
+      \      operationId: \"getLoggedUser\"\r
+
+      \      responses:\r
+
+      \        200:\r
+
+      \          description: \"OK\""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_env_2f4af5b7d1391a7fc4e4d727a242d803b3773769_sub
+    parentId: env_2f4af5b7d1391a7fc4e4d727a242d803b3773769
+    modified: 1614034237491
+    created: 1613935485637
+    name: OpenAPI env
+    data:
+      scheme: http
+      base_path: ""
+      host: localhost:8080/digitalgab
+    dataPropertyOrder:
+      "&":
+        - scheme
+        - base_path
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1613935485637
+    _type: environment

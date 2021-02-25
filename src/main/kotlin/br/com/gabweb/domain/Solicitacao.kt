@@ -21,6 +21,10 @@ class Solicitacao(
   @Column(name = "atualizado_em")
   var atualizadoEm: LocalDateTime? = null,
 
+  @Enumerated()
+  @Column(name = "status")
+  var status: STATUS_SOLICITACAO = STATUS_SOLICITACAO.ABERTA,
+
   @ManyToOne
   @JoinColumn(name = "usuario_id")
   var usuario: Usuario? = null,
@@ -29,12 +33,20 @@ class Solicitacao(
 
   @PrePersist
   fun onCreate() {
-    criadoEm = LocalDateTime.now();
+    criadoEm = LocalDateTime.now()
+    atualizadoEm = LocalDateTime.now()
   }
 
   @PreUpdate
   fun onUpdate() {
-    atualizadoEm = LocalDateTime.now();
+    atualizadoEm = LocalDateTime.now()
   }
 
+}
+
+enum class STATUS_SOLICITACAO {
+  ABERTA,
+  EM_ANDAMENTO,
+  FINALIZADA,
+  DESATIVADA
 }

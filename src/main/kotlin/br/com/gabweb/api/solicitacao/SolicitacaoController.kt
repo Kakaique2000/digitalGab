@@ -4,6 +4,7 @@ import br.com.gabweb.api.users.UsuarioService
 import br.com.gabweb.domain.Solicitacao
 import br.com.gabweb.domain.dto.SolicitacaoDTO
 import br.com.gabweb.domain.dto.toDTO
+import br.com.gabweb.domain.form.SolicitacaoForm
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.http.HttpStatus
@@ -23,7 +24,18 @@ class SolicitacaoController(private val solicitacaoRepository: SolicitacaoReposi
   @PreAuthorize("hasAnyAuthority('ADMIN_USER', 'OWNER_USER')")
   fun getSolicitacoes(page: Pageable): ResponseEntity<Page<SolicitacaoDTO>> {
     return ResponseEntity.ok(solicitacaoRepository.findAll(page).map { it.toDTO() })
+  }
 
+  @PatchMapping("/{id}")
+  @Transactional
+  @PreAuthorize("hasAnyAuthority('ADMIN_USER', 'OWNER_USER')")
+  fun patchSolicitacao(@PathVariable id: Long, @RequestBody @Valid solicitacaoForm: SolicitacaoForm): ResponseEntity<SolicitacaoDTO> {
+    return solicitacaoRepository.findById(id)
+      .takeIf { solicitacao -> solicitacao.isPresent }
+      ?.let {
+        it.get().status = solicitacaoForm.status
+        ResponseEntity.ok(it.get().toDTO())
+      }?: ResponseEntity.notFound().build()
   }
 
   @GetMapping("/{id}")
