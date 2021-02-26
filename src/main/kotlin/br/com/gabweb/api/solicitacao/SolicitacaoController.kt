@@ -1,6 +1,7 @@
 package br.com.gabweb.api.solicitacao
 
 import br.com.gabweb.api.users.UsuarioService
+import br.com.gabweb.domain.STATUS_SOLICITACAO
 import br.com.gabweb.domain.Solicitacao
 import br.com.gabweb.domain.dto.SolicitacaoDTO
 import br.com.gabweb.domain.dto.toDTO
@@ -42,6 +43,11 @@ class SolicitacaoController(private val solicitacaoRepository: SolicitacaoReposi
   @PreAuthorize("hasAnyAuthority('ADMIN_USER', 'OWNER_USER', 'STANDARD_USER')")
   fun getSolicitacao(@PathVariable id: Long): ResponseEntity<SolicitacaoDTO> {
     return ResponseEntity.of(solicitacaoRepository.findById(id).map { it.toDTO() })
+  }
+
+  @GetMapping("/categorizar")
+  fun getSolicitacoesStatus(): Map<STATUS_SOLICITACAO, Int> {
+    return STATUS_SOLICITACAO.values().map { it to solicitacaoRepository.countAllByStatus(it) }.toMap()
   }
 
 
