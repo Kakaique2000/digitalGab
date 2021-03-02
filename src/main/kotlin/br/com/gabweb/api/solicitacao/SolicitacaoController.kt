@@ -46,8 +46,8 @@ class SolicitacaoController(private val solicitacaoRepository: SolicitacaoReposi
   }
 
   @GetMapping("/categorizar")
-  fun getSolicitacoesStatus(): Map<STATUS_SOLICITACAO, Int> {
-    return STATUS_SOLICITACAO.values().map { it to solicitacaoRepository.countAllByStatus(it) }.toMap()
+  fun getSolicitacoesStatus(): Map<STATUS_SOLICITACAO, Long> {
+    return solicitacaoRepository.countGroupByStatus().map { it.first to it.second }.toMap()
   }
 
 
