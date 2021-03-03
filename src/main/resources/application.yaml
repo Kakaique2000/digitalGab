@@ -4,7 +4,7 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-      ddl-auto: create-drop
+      ddl-auto: update
       use-new-id-generator-mappings: false
     database-platform: org.hibernate.dialect.MySQL57Dialect
     open-in-view: true

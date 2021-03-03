@@ -46,10 +46,14 @@ class SolicitacaoController(private val solicitacaoRepository: SolicitacaoReposi
   }
 
   @GetMapping("/categorizar")
-  fun getSolicitacoesStatus(): Map<STATUS_SOLICITACAO, Long> {
+  fun getSolicitacoesCategorizadas(): Map<STATUS_SOLICITACAO, Long> {
     return solicitacaoRepository.countGroupByStatus().map { it.first to it.second }.toMap()
   }
 
+  @GetMapping("/categorias")
+  fun getSolicitacoesStatus(): List<STATUS_SOLICITACAO> {
+    return STATUS_SOLICITACAO.values().asList()
+  }
 
   @PostMapping
   @Transactional
